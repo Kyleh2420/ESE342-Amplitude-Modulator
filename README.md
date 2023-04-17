@@ -10,3 +10,4 @@ The parts simulated in this project are as follows:
 - HMC694LPE from Analog Devices
 - OPA20 from Texas Instruments
 - LT1206 from Analog Devices
+- YAT-30A+ from Mini Circuits

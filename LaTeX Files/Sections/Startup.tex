@@ -1,0 +1,11 @@
+\section{Startup Sequence}
+As specified in the HMC694LP4 datasheet, there needs to be a startup before it is fully operational. This requires a Voltmeter to measure the voltage across the Shunt Resistor connecting the 5V power rail to Vdd1, Vdd2, and Vdd3. The Voltmeter must read 0.17V to achieve a Idd of 170mA across the 1$\ohm$ Shunt Resistor.
+
+
+\begin{enumerate}
+    \item Flip the Single Pull Double Throw switch on the control voltage to -2V
+
+    \item Adjust the potentiometer while reading the voltage across the resistor to get a voltage of 0.17V
+
+    \item Flip the Single Pull Double Throw switch back to the OPA207
+\end{enumerate}

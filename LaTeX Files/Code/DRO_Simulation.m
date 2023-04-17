@@ -1,0 +1,1 @@
+carrierWave = sqrt(2*10^(carrierdBm/20))*cos(2*pi*carrierFrequency*t);

@@ -1,0 +1,1 @@
+messageWave = -(R2/R1)*((messageWave)+(DCOffset))

@@ -1,0 +1,74 @@
+% Author - Jon Arnt Kårstad, NTNU IMT
+\documentclass{article}
+
+% Importing document settings from our file "packages.sty"
+\usepackage{packages}
+
+% Beginning of document
+\begin{document}
+
+% Inserting title page
+\import{./}{title}
+
+% Defining front matter settings (Norsk: innstillinger for forord m.m.)
+\frontmatter
+
+% Inserting table of contents
+\tableofcontents
+
+% Inserting list of figures & list of tables
+\listoffigures
+
+% Defining main matter settings (Norsk: innstillinger for hoveddelen av teksten)
+\mainmatter
+
+\import{./Sections/}{Assignment}
+
+% Introduction explaining this LaTeX-template
+\import{./Sections/}{Introduction}
+
+% Example section added from an external tex-file, here located in ./Sections/
+
+\import{./Sections/}{Dielectric Resonator Oscillator}
+
+\import{./Sections/}{Variable Gain Amplifier}
+
+\import{./Sections/}{Attenuator}
+
+\import{./Sections/}{Transforming the Message Wave}
+
+\import{./Sections/}{Powering Everything}
+\import{./Sections/}{simulation}
+\import{./Sections/}{Startup}
+% Example section added directly into the main-file
+\section{Conclusion}
+
+\subsection{Error}
+It should be noted that there were errors in simulating the circuit.
+    \subsubsection{Message after Inverting Summing Amplifier}
+    Looking at Figure \ref{fig:opAmpVTime}, the maximum peak is theoretically -1.1V, instead we see it is approximately -1.15V. 
+
+    \subsubsection{Message Gain}
+    Looking at Figure \ref{fig:Gain}, we expect the peak of the function to reach 20dB and the "smaller hump" to reach 15dB, however the simulation makes it slightly off (about 0.2dB off). This error poses some concern as it implies that it persists on the final AM wave.
+
+    \subsubsection{Final Wave}
+    When calculating for the voltage peak, the result should be approximately 0.45V given that the power is at the 20dBm peak. As for the center, it comes out to be approximately 0.25V at 15dBm.
+    
+\subsection{Comments}
+In regards to Figure \ref{fig:opAmpVTime}, swinging up to -1.15V still meets design constraints, since we're interested in the maximum swing going down to be within 5dB. As for Figure \ref{fig:Gain}, we can use Figure \ref{fig:FinalAM} as a litmus for how adverse the error's effect is. Although this design isn't ideal, seeing that the peak and center are close to theoretical in Figure \ref{fig:FinalAM}, implies that the errors mentioned are trivial at best.
+\\
+\\
+\\
+\textit{An inventor is one who can see the applicability of means to supply demand five years before it is obvious to those skilled in the art. } -  Reginald Aubrey Fessenden
+
+\nocite{*} 
+% Printing bibliography
+\newpage
+\printbibliography[heading = bibintoc, title = Bibliography]    % 'bibintoc' inserts our bibliography into the table of contents
+
+% Inserting appendix with separate settings
+\addappendix
+\import{./Appendices/}{example_appendix}
+
+% End of document
+\end{document}

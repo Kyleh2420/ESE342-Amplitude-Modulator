@@ -1,0 +1,1 @@
+AMWaveV = carrierWave .* 10.^(transferFunctionGain/20);

@@ -1,0 +1,1 @@
+FinalWave = AMWaveV ./10.^(30/20);

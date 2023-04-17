@@ -1,0 +1,10 @@
+\section{Attenuator}
+It may be confusing that when analyzing the AM output before attenuation, it achieves the goal of $\pm$5dB, however it is not centered at 15dBm. Rather, it is centered at 15dB. Since the HMC694LPE has an operational linear region between ~12.2dB and 20dB. When we add this to a carrier wave of 0dBm, we cannot achieve the specifications. Therefore, this circuit must include attenuation to meet specifications. To achieve 15dBm from 15dBW, we must use the equation
+\begin{equation}
+    30 + dB = dBm
+\end{equation}
+to know how much attenuation we need. Solving this equation for $dBm=15$,
+\begin{equation}
+    dB = -15
+\end{equation}
+Therefore, we need to subtract 30dB in since we're at 15dB to achieve -15dBW or 15dBm.
